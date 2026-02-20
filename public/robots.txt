@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.pmuroma.it/sitemap.xml
+
+# Block ALL analytics and marketing crawlers
+User-agent: Googlebot
+Disallow: /analytics/
+Disallow: /tracking/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: TwitterBot
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+User-agent: PinterestBot
+Disallow: /
+
+# No tracking scripts allowed
+Crawl-delay: 1
