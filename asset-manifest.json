@@ -1,0 +1,50 @@
+[
+  {
+    "role": "hero-paola",
+    "source": "Downloads/WhatsApp Image 2026-09-03 at 21.52.46 (1).jpeg",
+    "file": "assets/images/paola-benchea-dermopigmentista-roma-studio.jpeg"
+  },
+  {
+    "role": "treatment-demo",
+    "source": "Downloads/sopracciglia pelo realistico/da usare come esempio trattamento.jpeg",
+    "file": "assets/images/trattamento-sopracciglia-pelo-realistico-demo.jpeg"
+  },
+  {
+    "role": "treatment-demo",
+    "source": "Downloads/sopracciglia pelo realistico/da usare come esempio trattamento a scorrimento.jpeg",
+    "file": "assets/images/trattamento-sopracciglia-pelo-realistico-dettaglio.jpeg"
+  },
+  {
+    "role": "treatment-demo",
+    "source": "Downloads/sopracciglia sfumate/da usare come dimostrativo principale del trattamento.jpeg",
+    "file": "assets/images/trattamento-sopracciglia-sfumate-demo.jpeg"
+  },
+  {
+    "role": "treatment-demo",
+    "source": "Downloads/eyeliner/WhatsApp Image 2026-09-03 at 15.34.41.jpeg",
+    "file": "assets/images/trattamento-eyeliner-infracigliare-demo.jpeg"
+  },
+  {
+    "role": "portfolio",
+    "sourceFolder": "Downloads/prima e dopo",
+    "files": [
+      "assets/images/portfolio-sopracciglia-naturali-roma-01.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-02.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-03.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-04.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-05.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-06.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-07.jpeg",
+      "assets/images/portfolio-sopracciglia-naturali-roma-08.jpeg"
+    ]
+  },
+  {
+    "role": "studio-only",
+    "note": "Use only in the studio/location section, not in portfolio or treatments.",
+    "files": [
+      "assets/images/studio-pmu-roma-01.png",
+      "assets/images/studio-pmu-roma-02.png",
+      "assets/images/studio-pmu-roma-03.png"
+    ]
+  }
+]
