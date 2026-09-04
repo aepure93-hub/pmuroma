@@ -9,15 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=18">
+  <link rel="stylesheet" href="assets/css/styles.css?v=19">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" data-header>
     <a class="brand" href="index.html">
       <span class="brand-mark">PB</span>
       <span><strong>Paola Benchea</strong><small>Permanent makeup Roma</small></span>
     </a>
-    <nav class="main-nav" aria-label="Navigazione principale">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Apri menu</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale" data-mobile-nav>
       <a href="index.html#trattamenti">Trattamenti</a>
       <a href="dettagli-trattamento.html">Dettagli</a>
       <a href="index.html#prezzi">Prezzi</a>
@@ -43,8 +49,16 @@
     <p>Questa bozza deve essere verificata prima della pubblicazione definitiva in base agli strumenti realmente attivi sul sito e all'organizzazione amministrativa dell'attività.</p>
   </main>
   <footer class="site-footer">
-    <div><strong>Trucco permanente by Paola Benchea</strong><p>P.IVA 17536931003</p></div>
+    <div class="footer-brand">
+      <strong>Trucco permanente by Paola Benchea</strong>
+      <p>P.IVA 17536931003 - Ildebrando della Giovanna 83B, 00166 Roma</p>
+      <div class="footer-contact">
+        <a href="tel:+393514260868">+39 351 426 0868</a>
+        <a href="mailto:info@pmuroma.it">info@pmuroma.it</a>
+      </div>
+    </div>
     <nav><a href="dettagli-trattamento.html">Dettagli trattamento</a><a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a><a href="termini.html">Termini</a></nav>
   </footer>
+  <script src="assets/js/main.js?v=19" defer></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 const banner = document.querySelector("[data-cookie-banner]");
 const accept = document.querySelector("[data-cookie-accept]");
 const header = document.querySelector("[data-header]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const mobileNav = document.querySelector("[data-mobile-nav]");
 
 if (banner && !localStorage.getItem("pmuroma_cookie_ok")) {
   banner.hidden = false;
@@ -20,6 +22,25 @@ const updateHeader = () => {
 
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+
+if (header && navToggle && mobileNav) {
+  const setMenuOpen = (open) => {
+    header.toggleAttribute("data-nav-open", open);
+    navToggle.setAttribute("aria-expanded", String(open));
+  };
+
+  navToggle.addEventListener("click", () => {
+    setMenuOpen(!header.hasAttribute("data-nav-open"));
+  });
+
+  mobileNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+}
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let motionFrame = 0;
