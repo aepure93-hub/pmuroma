@@ -1082,6 +1082,63 @@ summary {
   font-weight: 900;
 }
 
+.pmuloop-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(260px, 0.56fr);
+  gap: clamp(28px, 6vw, 76px);
+  align-items: center;
+  padding: clamp(42px, 6vw, 72px);
+  border: 1px solid rgba(194, 141, 128, 0.22);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(194, 141, 128, 0.24), transparent 22rem),
+    radial-gradient(circle at 12% 92%, rgba(234, 208, 201, 0.16), transparent 18rem),
+    linear-gradient(135deg, var(--ink), var(--cocoa));
+  color: var(--cream);
+  box-shadow: 0 28px 72px rgba(23, 17, 18, 0.18);
+}
+
+.pmuloop-teaser::before {
+  display: none;
+}
+
+.pmuloop-copy {
+  max-width: 680px;
+}
+
+.pmuloop-copy .eyebrow {
+  color: var(--lip-pale);
+}
+
+.pmuloop-copy p {
+  color: rgba(251, 245, 238, 0.68);
+}
+
+.pmuloop-copy .button.secondary {
+  margin-top: 14px;
+  border-color: rgba(234, 208, 201, 0.28);
+  background: rgba(251, 245, 238, 0.08);
+  color: var(--cream);
+}
+
+.pmuloop-phone {
+  justify-self: center;
+  width: min(300px, 100%);
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgba(251, 245, 238, 0.18);
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(251, 245, 238, 0.2), rgba(251, 245, 238, 0.06));
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+.pmuloop-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 26px;
+}
+
 .contact-band {
   display: grid;
   scroll-margin-top: 104px;
@@ -1876,6 +1933,7 @@ summary {
   .hero,
   .detail-hero,
   .intro-grid,
+  .pmuloop-teaser,
   .contact-band {
     grid-template-columns: 1fr;
   }
@@ -2065,6 +2123,7 @@ summary {
   .hero,
   .detail-hero,
   .section,
+  .pmuloop-teaser,
   .contact-band {
     width: calc(100% - 24px);
   }
@@ -2231,6 +2290,14 @@ summary {
 
   .detail-note {
     padding: 28px 22px;
+  }
+
+  .pmuloop-teaser {
+    padding: 30px 22px;
+  }
+
+  .pmuloop-phone {
+    width: min(248px, 86%);
   }
 
   .studio-collage {
