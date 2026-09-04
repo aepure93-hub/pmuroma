@@ -43,7 +43,7 @@ if (!prefersReducedMotion) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".intro-grid, .section-heading, .treatment-card, .price-row, .demo-grid figure, .gallery-grid figure, .split-media, .split-copy, blockquote, .faq-list, .contact-band"
+  ".intro-grid, .value-card, .section-heading, .treatment-card, .price-row, .demo-grid figure, .gallery-grid figure, .split-media, .split-copy, blockquote, .faq-list, .contact-band"
 );
 
 if ("IntersectionObserver" in window && !prefersReducedMotion) {

@@ -528,6 +528,7 @@ dd {
 .split-copy p,
 .section-heading p,
 .treatment-card p,
+.value-card p,
 .faq-list p,
 .contact-band p,
 .site-footer p,
@@ -545,6 +546,87 @@ dd {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+}
+
+.value-section {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 32px));
+  margin: clamp(-18px, -1vw, 0px) auto clamp(18px, 3vw, 42px);
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(154, 96, 84, 0.18);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(251, 245, 238, 0.82), rgba(234, 208, 201, 0.38)),
+    rgba(251, 245, 238, 0.72);
+  box-shadow: 0 26px 80px rgba(43, 32, 32, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.value-card {
+  position: relative;
+  min-height: 214px;
+  padding: clamp(24px, 3vw, 34px);
+  border-right: 1px solid var(--line);
+}
+
+.value-card:last-child {
+  border-right: 0;
+}
+
+.value-card::after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  width: 64px;
+  height: 42px;
+  opacity: 0.22;
+  background-image: radial-gradient(circle, var(--lip) 1.2px, transparent 1.4px);
+  background-size: 11px 11px;
+}
+
+.value-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 28px;
+  place-items: center;
+  border: 1px solid rgba(154, 96, 84, 0.24);
+  border-radius: 999px;
+  color: var(--lip);
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: inset 0 0 0 6px rgba(154, 96, 84, 0.05);
+}
+
+.value-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-card h3 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 0.96;
+}
+
+.value-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 28ch;
+  margin: 0;
+  font-size: 15px;
 }
 
 .treatment-grid {
@@ -1112,8 +1194,24 @@ summary {
   }
 
   .treatment-grid,
+  .value-grid,
   .review-grid {
     grid-template-columns: 1fr;
+  }
+
+  .value-section {
+    width: min(100% - 28px, 620px);
+    margin-top: -8px;
+  }
+
+  .value-card {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .value-card:last-child {
+    border-bottom: 0;
   }
 
   .demo-grid,
