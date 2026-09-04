@@ -520,6 +520,10 @@ dd {
   align-items: start;
 }
 
+.intro-grid {
+  align-items: center;
+}
+
 .intro p,
 .split-copy p,
 .section-heading p,
