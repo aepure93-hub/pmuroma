@@ -2,7 +2,16 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const htmlFiles = ["index.html", "dettagli-trattamento.html", "privacy.html", "cookie.html", "termini.html", "404.html"];
+const htmlFiles = [];
+const collectHtml = (dir) => {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if ([".git", ".vercel", "node_modules"].includes(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) collectHtml(full);
+    if (entry.isFile() && entry.name.endsWith(".html")) htmlFiles.push(path.relative(root, full));
+  }
+};
+collectHtml(root);
 const forbidden = [
   "Microblading",
   "Laminazione",
@@ -39,8 +48,15 @@ for (const file of htmlFiles) {
     if (/^(https?:|mailto:|tel:|#|javascript:)/.test(ref)) continue;
     const cleanRef = ref.split("?")[0].split("#")[0];
     if (!cleanRef) continue;
-    const target = path.join(root, cleanRef);
-    if (!fs.existsSync(target)) errors.push(`Broken local asset/link in ${file}: ${ref}`);
+    const localPath = cleanRef.replace(/^\/+/, "");
+    const candidates = [
+      path.join(root, localPath),
+      path.join(root, `${localPath}.html`),
+      path.join(root, localPath, "index.html")
+    ];
+    if (!candidates.some((target) => fs.existsSync(target))) {
+      errors.push(`Broken local asset/link in ${file}: ${ref}`);
+    }
   }
 }
 

@@ -1,0 +1,9 @@
+content/
+tools/
+.github/
+BLOG-SCHEDULE.md
+DNS-CUTOVER.md
+README.md
+asset-manifest.json
+reports-*.jpg
+.env.local
