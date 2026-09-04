@@ -35,6 +35,15 @@ const formatDate = (iso) =>
     timeZone: "Europe/Rome"
   }).format(new Date(iso));
 
+const linkLabels = new Map([
+  ["#trattamenti", "Trattamenti disponibili"],
+  ["#prezzi", "Listino e foto trattamento"],
+  ["#contatti", "Prenota una consulenza"],
+  ["#portfolio", "Guarda il portfolio"],
+  ["#studio", "Studio, parcheggio e percorso"],
+  ["dettagli-trattamento.html", "Come funziona il trattamento"]
+]);
+
 const nav = (active = "") => `
   <header class="site-header" data-header>
     <a class="brand" href="/" aria-label="Paola Benchea home">
@@ -112,7 +121,7 @@ function pageShell({ title, description, canonical, image, type = "website", bod
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=23">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=24">
   ${structuredData ? `<script type="application/ld+json">\n  ${JSON.stringify(structuredData, null, 2)}\n  </script>` : ""}
 </head>
 <body>
@@ -126,7 +135,7 @@ ${nav("blog")}
 ${body}
 ${footer}
 ${cookieBanner}
-  <script src="/assets/js/main.js?v=23"></script>
+  <script src="/assets/js/main.js?v=24"></script>
 </body>
 </html>
 `;
@@ -173,7 +182,9 @@ for (const post of published) {
             .join("\n")}
           <nav class="blog-related" aria-label="Approfondimenti collegati">
             <h2>Continua il percorso</h2>
-            ${post.links.map((href) => `<a href="${linkFor(href)}">${href.startsWith("http") ? "Guarda altri lavori su Instagram" : "Vai alla sezione collegata"}</a>`).join("\n            ")}
+            <div class="blog-related-links">
+              ${post.links.map((href) => `<a href="${linkFor(href)}">${href.startsWith("http") ? "Guarda altri lavori su Instagram" : linkLabels.get(href) || "Approfondimento collegato"}</a>`).join("\n              ")}
+            </div>
           </nav>
         </div>
       </div>
