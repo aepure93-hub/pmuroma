@@ -119,9 +119,11 @@ function pageShell({ title, description, canonical, image, type = "website", bod
   <link rel="canonical" href="${canonical}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="/favicon.png" sizes="192x192" type="image/png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=24">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=26">
   ${structuredData ? `<script type="application/ld+json">\n  ${JSON.stringify(structuredData, null, 2)}\n  </script>` : ""}
 </head>
 <body>
@@ -135,7 +137,7 @@ ${nav("blog")}
 ${body}
 ${footer}
 ${cookieBanner}
-  <script src="/assets/js/main.js?v=24"></script>
+  <script src="/assets/js/main.js?v=26"></script>
 </body>
 </html>
 `;
@@ -202,7 +204,7 @@ for (const post of published) {
     publisher: {
       "@type": "Organization",
       name: "Trucco permanente by Paola Benchea",
-      logo: { "@type": "ImageObject", url: `${baseUrl}/favicon.svg` }
+      logo: { "@type": "ImageObject", url: `${baseUrl}/favicon-512.png` }
     },
     mainEntityOfPage: canonical
   };
