@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const htmlFiles = ["index.html", "privacy.html", "cookie.html", "termini.html", "404.html"];
+const htmlFiles = ["index.html", "dettagli-trattamento.html", "privacy.html", "cookie.html", "termini.html", "404.html"];
 const forbidden = [
   "Microblading",
   "Laminazione",
