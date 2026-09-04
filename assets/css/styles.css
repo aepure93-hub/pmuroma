@@ -551,7 +551,7 @@ dd {
 .value-section {
   position: relative;
   z-index: 1;
-  width: min(1120px, calc(100% - 32px));
+  width: min(890px, calc(100% - 32px));
   margin: clamp(-18px, -1vw, 0px) auto clamp(18px, 3vw, 42px);
 }
 
@@ -570,8 +570,8 @@ dd {
 
 .value-card {
   position: relative;
-  min-height: 214px;
-  padding: clamp(24px, 3vw, 34px);
+  min-height: 196px;
+  padding: clamp(22px, 2.4vw, 30px);
   border-right: 1px solid var(--line);
 }
 
@@ -593,9 +593,9 @@ dd {
 
 .value-icon {
   display: grid;
-  width: 46px;
-  height: 46px;
-  margin-bottom: 28px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 24px;
   place-items: center;
   border: 1px solid rgba(154, 96, 84, 0.24);
   border-radius: 999px;
@@ -617,7 +617,7 @@ dd {
 .value-card h3 {
   margin: 0 0 10px;
   font-family: var(--serif);
-  font-size: clamp(30px, 3.2vw, 44px);
+  font-size: clamp(28px, 2.8vw, 38px);
   line-height: 0.96;
 }
 
