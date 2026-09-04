@@ -788,7 +788,7 @@ dd {
 .price-row img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   filter: saturate(0.98) contrast(1.02);
   transition: transform 700ms ease;
@@ -850,6 +850,7 @@ dd {
 
 .gallery-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
 }
 
 .portfolio-cta {
@@ -881,11 +882,20 @@ dd {
   min-height: 460px;
 }
 
-.demo-grid img,
-.gallery-grid img {
+.demo-grid img {
   height: 100%;
   min-height: 100%;
   object-fit: cover;
+  filter: saturate(0.98) contrast(1.02);
+  transition: transform 700ms ease;
+}
+
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
   filter: saturate(0.98) contrast(1.02);
   transition: transform 700ms ease;
 }

@@ -21,21 +21,49 @@
   },
   {
     "role": "treatment-demo",
-    "source": "Downloads/eyeliner/WhatsApp Image 2026-09-03 at 15.34.41.jpeg",
-    "file": "assets/images/trattamento-eyeliner-infracigliare-demo.jpeg"
+    "source": "Downloads/collore labbra/da usare come esempio per costi.jpeg",
+    "file": "assets/images/trattamento-labbra-colore-permanente-roma.jpeg"
+  },
+  {
+    "role": "treatment-demo",
+    "source": "Downloads/eyeliner/WhatsApp Iasdasdmage 2026-09-03 at 15.34.41.jpeg",
+    "file": "assets/images/trattamento-eyeliner-infracigliare-prima-dopo-roma.jpeg"
   },
   {
     "role": "portfolio",
     "sourceFolder": "Downloads/prima e dopo",
     "files": [
-      "assets/images/portfolio-sopracciglia-naturali-roma-01.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-02.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-03.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-04.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-05.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-06.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-07.jpeg",
-      "assets/images/portfolio-sopracciglia-naturali-roma-08.jpeg"
+      "assets/images/portfolio-sopracciglia-pelo-realistico-roma-01.jpeg",
+      "assets/images/portfolio-sopracciglia-pelo-realistico-roma-02.jpeg",
+      "assets/images/portfolio-sopracciglia-pelo-realistico-roma-03.jpeg",
+      "assets/images/portfolio-sopracciglia-sfumate-roma-01.jpeg",
+      "assets/images/portfolio-sopracciglia-sfumate-roma-02.jpeg",
+      "assets/images/portfolio-sopracciglia-sfumate-roma-03.jpeg",
+      "assets/images/portfolio-sopracciglia-sfumate-roma-04.jpeg",
+      "assets/images/portfolio-sopracciglia-pelo-realistico-roma-04.jpeg",
+      "assets/images/portfolio-sopracciglia-cover-up-roma-01.jpeg",
+      "assets/images/portfolio-sopracciglia-pelo-realistico-roma-05.jpeg",
+      "assets/images/portfolio-sopracciglia-pelo-realistico-roma-06.jpeg",
+      "assets/images/portfolio-sopracciglia-guarito-dopo-roma-01.jpeg",
+      "assets/images/portfolio-labbra-prima-dopo-roma-01.jpeg",
+      "assets/images/portfolio-labbra-prima-dopo-roma-02.jpeg"
+    ]
+  },
+  {
+    "role": "portfolio",
+    "sourceFolder": "Downloads/collore labbra",
+    "files": [
+      "assets/images/portfolio-labbra-colore-permanente-roma-01.jpeg",
+      "assets/images/portfolio-labbra-colore-permanente-roma-02.jpeg",
+      "assets/images/portfolio-labbra-colore-permanente-roma-03.jpeg",
+      "assets/images/portfolio-labbra-colore-permanente-roma-04.jpeg"
+    ]
+  },
+  {
+    "role": "portfolio",
+    "sourceFolder": "Downloads/eyeliner",
+    "files": [
+      "assets/images/trattamento-eyeliner-infracigliare-prima-dopo-roma.jpeg"
     ]
   },
   {
