@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,6 +35,16 @@
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/blog/sopracciglia-pelo-realistico-sfumate-differenze</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/portfolio-sopracciglia-pelo-realistico-roma-01.jpeg</image:loc>
+      <image:title>Sopracciglia pelo realistico o sfumate: differenze e risultato</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog/trucco-permanente-roma-come-scegliere-centro</loc>
