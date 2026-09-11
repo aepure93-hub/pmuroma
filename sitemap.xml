@@ -2,25 +2,133 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.pmuroma.it/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/paola-benchea-dermopigmentista-roma-studio.jpeg</image:loc>
+      <image:title>Paola Benchea dermopigmentista a Roma</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.pmuroma.it/dettagli-trattamento</loc>
-    <lastmod>2026-09-04</lastmod>
+    <loc>https://www.pmuroma.it/trucco-permanente-roma</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/paola-benchea-dermopigmentista-roma-studio.jpeg</image:loc>
+      <image:title>Trucco permanente naturale a Roma</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/sopracciglia</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/trattamento-sopracciglia-pelo-realistico-demo.jpeg</image:loc>
+      <image:title>Trucco permanente sopracciglia Roma</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.pmuroma.it/paola-benchea</loc>
+    <loc>https://www.pmuroma.it/sopracciglia-pelo-realistico-roma</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/trattamento-sopracciglia-pelo-realistico-demo.jpeg</image:loc>
+      <image:title>Sopracciglia pelo realistico Roma</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/sopracciglia-sfumate-roma</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/trattamento-sopracciglia-sfumate-demo.jpeg</image:loc>
+      <image:title>Sopracciglia sfumate Roma</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/trucco-permanente-labbra-roma</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/trattamento-labbra-colore-permanente-roma.jpeg</image:loc>
+      <image:title>Trucco permanente labbra Roma</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/eyeliner-permanente-roma</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/eyeliner-infracigliare-prima-dopo-paola-benchea-roma.jpeg</image:loc>
+      <image:title>Eyeliner infracigliare permanente Roma</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/prezzi</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/portfolio</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/portfolio-sopracciglia-pelo-realistico-roma-01.jpeg</image:loc>
+      <image:title>Portfolio trucco permanente Roma</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/chi-e-paola-benchea</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://www.pmuroma.it/assets/images/paola-benchea-dermopigmentista-roma-studio.jpeg</image:loc>
-      <image:title>Paola Benchea dermopigmentista e operatrice PMU a Roma</image:title>
+      <image:title>Paola Benchea dermopigmentista PMU Roma</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/studio-roma-aurelia</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/studio-pmu-roma-01.png</image:loc>
+      <image:title>Studio PMU Roma Aurelia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/recensioni</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/faq-trucco-permanente</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/dettagli-trattamento</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/contatti</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
@@ -29,31 +137,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pmuroma.it/privacy</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.pmuroma.it/cookie</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.pmuroma.it/termini</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://www.pmuroma.it/blog/sopracciglia-pelo-realistico-sfumate-differenze</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.pmuroma.it/assets/images/portfolio-sopracciglia-pelo-realistico-roma-01.jpeg</image:loc>
-      <image:title>Sopracciglia pelo realistico o sfumate: differenze e risultato</image:title>
+      <image:title>Sopracciglia pelo realistico o sfumate</image:title>
     </image:image>
   </url>
   <url>
@@ -63,7 +153,7 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.pmuroma.it/assets/images/paola-benchea-dermopigmentista-roma-studio.jpeg</image:loc>
-      <image:title>Trucco permanente a Roma: come scegliere il centro giusto</image:title>
+      <image:title>Trucco permanente a Roma centro giusto</image:title>
     </image:image>
   </url>
 </urlset>
