@@ -19,5 +19,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/paola-benchea",
+      "destination": "/chi-e-paola-benchea",
+      "permanent": true
+    },
+    {
+      "source": "/paola-benchea.html",
+      "destination": "/chi-e-paola-benchea",
+      "permanent": true
+    }
   ]
 }
