@@ -41,7 +41,10 @@ const linkLabels = new Map([
   ["#contatti", "Prenota una consulenza"],
   ["#portfolio", "Guarda il portfolio"],
   ["#studio", "Studio, parcheggio e percorso"],
-  ["dettagli-trattamento.html", "Come funziona il trattamento"]
+  ["dettagli-trattamento.html", "Come funziona il trattamento"],
+  ["sopracciglia.html", "Trucco permanente sopracciglia"],
+  ["prezzi.html", "Prezzi trucco permanente"],
+  ["contatti.html", "Contatti"]
 ]);
 
 const nav = (active = "") => `
@@ -60,13 +63,13 @@ const nav = (active = "") => `
       <span class="sr-only">Apri menu</span>
     </button>
     <nav class="main-nav" id="main-nav" aria-label="Navigazione principale" data-mobile-nav>
-      <a href="/#trattamenti">Trattamenti</a>
-      <a href="/dettagli-trattamento">Dettagli</a>
-      <a href="/#prezzi">Prezzi</a>
-      <a href="/#portfolio">Portfolio</a>
-      <a href="/#studio">Studio</a>
+      <a href="/trucco-permanente-roma">Trattamenti</a>
+      <a href="/prezzi">Prezzi</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/studio-roma-aurelia">Studio</a>
+      <a href="/chi-e-paola-benchea">Paola</a>
       <a href="/blog"${active === "blog" ? ' aria-current="page"' : ""}>Blog</a>
-      <a href="/#contatti">Contatti</a>
+      <a href="/contatti">Contatti</a>
     </nav>
     <a class="header-cta" href="https://wa.me/393514260868?text=Ciao%20Paola%2C%20vorrei%20prenotare%20una%20consulenza%20per%20trucco%20permanente." rel="noopener">WhatsApp</a>
   </header>`;
@@ -75,15 +78,20 @@ const footer = `
   <footer class="site-footer">
     <div class="footer-brand">
       <strong>Trucco permanente by Paola Benchea</strong>
-      <p>P.IVA 17536931003 - Ildebrando della Giovanna 83B, 00166 Roma</p>
+      <p>P.IVA 17536931003 - Via Ildebrando della Giovanna 83B, 00166 Roma</p>
       <div class="footer-contact">
         <a href="tel:+393514260868">+39 351 426 0868</a>
         <a href="mailto:info@pmuroma.it">info@pmuroma.it</a>
       </div>
     </div>
     <nav aria-label="Link utili e legali">
+      <a href="/trucco-permanente-roma">Trattamenti</a>
+      <a href="/sopracciglia">Sopracciglia</a>
+      <a href="/prezzi">Prezzi</a>
+      <a href="/chi-e-paola-benchea">Paola Benchea</a>
+      <a href="/studio-roma-aurelia">Studio</a>
+      <a href="/contatti">Contatti</a>
       <a href="/blog">Blog</a>
-      <a href="/dettagli-trattamento">Dettagli trattamento</a>
       <a href="/privacy">Privacy</a>
       <a href="/cookie">Cookie</a>
       <a href="/termini">Termini</a>
@@ -302,12 +310,22 @@ fs.writeFileSync(
 );
 
 const staticUrls = [
-  ["/", "2026-09-04", "weekly", "1.0"],
-  ["/dettagli-trattamento", "2026-09-04", "monthly", "0.8"],
-  ["/blog", new Date().toISOString().slice(0, 10), "weekly", "0.8"],
-  ["/privacy", "2026-09-04", "yearly", "0.3"],
-  ["/cookie", "2026-09-04", "yearly", "0.3"],
-  ["/termini", "2026-09-04", "yearly", "0.3"]
+  ["/", "2026-09-11", "weekly", "1.0"],
+  ["/trucco-permanente-roma", "2026-09-11", "weekly", "0.95"],
+  ["/sopracciglia", "2026-09-11", "monthly", "0.9"],
+  ["/sopracciglia-pelo-realistico-roma", "2026-09-11", "monthly", "0.9"],
+  ["/sopracciglia-sfumate-roma", "2026-09-11", "monthly", "0.9"],
+  ["/trucco-permanente-labbra-roma", "2026-09-11", "monthly", "0.9"],
+  ["/eyeliner-permanente-roma", "2026-09-11", "monthly", "0.9"],
+  ["/prezzi", "2026-09-11", "monthly", "0.85"],
+  ["/portfolio", "2026-09-11", "monthly", "0.85"],
+  ["/chi-e-paola-benchea", "2026-09-11", "monthly", "0.85"],
+  ["/studio-roma-aurelia", "2026-09-11", "monthly", "0.85"],
+  ["/recensioni", "2026-09-11", "monthly", "0.75"],
+  ["/faq-trucco-permanente", "2026-09-11", "monthly", "0.8"],
+  ["/dettagli-trattamento", "2026-09-11", "monthly", "0.8"],
+  ["/contatti", "2026-09-11", "monthly", "0.85"],
+  ["/blog", new Date().toISOString().slice(0, 10), "weekly", "0.8"]
 ];
 
 const sitemapUrls = [
