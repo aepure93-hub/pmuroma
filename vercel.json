@@ -30,6 +30,41 @@
       "source": "/paola-benchea.html",
       "destination": "/chi-e-paola-benchea",
       "permanent": true
+    },
+    {
+      "source": "/trucco-permanente-roma-colore-labbra",
+      "destination": "/trucco-permanente-labbra-roma",
+      "permanent": true
+    },
+    {
+      "source": "/trucco-permanente-roma-laminazione-sopracciglia",
+      "destination": "/sopracciglia",
+      "permanent": true
+    },
+    {
+      "source": "/trucco-permanente-roma-microblading",
+      "destination": "/faq-trucco-permanente",
+      "permanent": true
+    },
+    {
+      "source": "/il-mio-studio",
+      "destination": "/studio-roma-aurelia",
+      "permanent": true
+    },
+    {
+      "source": "/trucco-permanente-roma-sopracciglia-sfumate",
+      "destination": "/sopracciglia-sfumate-roma",
+      "permanent": true
+    },
+    {
+      "source": "/trucco-permanente-roma-sopracciglia-pelo-realistico",
+      "destination": "/sopracciglia-pelo-realistico-roma",
+      "permanent": true
+    },
+    {
+      "source": "/trucco-permanente-roma-eyeliner",
+      "destination": "/eyeliner-permanente-roma",
+      "permanent": true
     }
   ]
 }
