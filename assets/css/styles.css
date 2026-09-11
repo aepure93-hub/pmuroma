@@ -1373,6 +1373,35 @@ summary {
   text-transform: uppercase;
 }
 
+.profile-hero {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: clamp(380px, 48vw, 520px);
+}
+
+.profile-hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(520px, 100%);
+}
+
+.profile-hero .blog-summary {
+  position: static;
+  margin-top: clamp(22px, 3vw, 34px);
+}
+
+@media (max-width: 820px) {
+  .profile-hero {
+    justify-content: flex-start;
+    min-height: auto;
+  }
+
+  .profile-hero-copy {
+    width: 100%;
+  }
+}
+
 .blog-index-section,
 .blog-schedule-section {
   width: min(1160px, calc(100% - 36px));
