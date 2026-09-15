@@ -13,7 +13,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=24">
+  <link rel="stylesheet" href="assets/vendor/cookieconsent/cookieconsent.css?v=3.1.0">
+  <link rel="stylesheet" href="assets/css/styles.css?v=29">
 </head>
 <body>
   <header class="site-header" data-header>
@@ -39,17 +40,17 @@
   <main class="legal-page">
     <p class="eyebrow">Cookie</p>
     <h1>Cookie Policy</h1>
-    <p>Il sito usa cookie tecnici necessari al funzionamento e alla memorizzazione delle preferenze essenziali, come l'accettazione del banner cookie.</p>
+    <p>Ultimo aggiornamento: 15 settembre 2026. Il sito usa strumenti tecnici necessari e, soltanto dopo consenso, Meta Pixel per misurare visite e interazioni pubblicitarie.</p>
     <h2>Cookie tecnici</h2>
-    <p>I cookie tecnici permettono la corretta navigazione e non richiedono consenso preventivo. Possono includere preferenze salvate nel browser dell'utente.</p>
-    <h2>Analytics e marketing</h2>
-    <p>Al momento la versione statica non installa cookie analytics o marketing. Se in futuro verranno attivati Google Analytics, Meta Pixel o strumenti simili, il sito dovrà mostrare un banner con scelta granulare e consenso esplicito.</p>
+    <p>Il cookie <code>pmuroma_consent</code> memorizza per 180 giorni le preferenze espresse nel banner. È necessario per non riproporre la scelta a ogni pagina e non viene usato per profilazione.</p>
+    <h2>Meta Pixel</h2>
+    <p>Meta Pixel è disattivato per impostazione predefinita. Se l'utente accetta la categoria marketing, il sito carica lo strumento e può creare identificatori come <code>_fbp</code> e <code>_fbc</code> per misurare visualizzazioni e contatti. Il consenso può essere rifiutato o revocato senza impedire la navigazione.</p>
     <h2>Servizi esterni</h2>
     <p>I link verso WhatsApp, Instagram e Google Maps portano a servizi esterni che possono usare cookie propri secondo le rispettive informative.</p>
     <h2>Gestione preferenze</h2>
-    <p>L'utente può cancellare o bloccare i cookie tramite le impostazioni del browser. La cancellazione può far ricomparire il banner informativo.</p>
-    <h2>Nota</h2>
-    <p>Questa bozza va aggiornata prima della pubblicazione se vengono aggiunti form avanzati, mappe incorporate, analytics, pixel pubblicitari o piattaforme di prenotazione.</p>
+    <p>L'utente può accettare, rifiutare o personalizzare il consenso dal banner e riaprire in ogni momento il pannello tramite “Preferenze cookie” nel footer. È anche possibile cancellare i cookie dalle impostazioni del browser.</p>
+    <h2>Configurazione attuale</h2>
+    <p>Non sono presenti Google Analytics, mappe incorporate, landing LeadConnector o moduli di profilazione sul sito proprietario. Qualsiasi nuovo strumento verrà valutato e documentato prima dell'attivazione.</p>
   </main>
   <footer class="site-footer">
     <div class="footer-brand">
@@ -62,6 +63,7 @@
     </div>
     <nav><a href="dettagli-trattamento.html">Dettagli trattamento</a><a href="blog/">Blog</a><a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a><a href="termini.html">Termini</a></nav>
   </footer>
-  <script src="assets/js/main.js?v=24" defer></script>
+  <script src="assets/js/main.js?v=25" defer></script>
+  <script type="module" src="assets/js/consent.js?v=1"></script>
 </body>
 </html>

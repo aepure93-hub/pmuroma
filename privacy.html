@@ -13,7 +13,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=24">
+  <link rel="stylesheet" href="assets/vendor/cookieconsent/cookieconsent.css?v=3.1.0">
+  <link rel="stylesheet" href="assets/css/styles.css?v=29">
 </head>
 <body>
   <header class="site-header" data-header>
@@ -39,19 +40,26 @@
   <main class="legal-page">
     <p class="eyebrow">Informativa privacy</p>
     <h1>Privacy Policy</h1>
-    <p>Questa informativa descrive come vengono trattati i dati personali raccolti tramite il sito pmuroma.it e i canali di contatto collegati.</p>
+    <p>Ultimo aggiornamento: 15 settembre 2026. Questa informativa descrive come vengono trattati i dati personali raccolti tramite pmuroma.it e i canali di contatto scelti dall'utente.</p>
     <h2>Titolare del trattamento</h2>
     <p>Trucco permanente by Paola Benchea, P.IVA 17536931003, con studio in Ildebrando della Giovanna 83B, 00166 Roma. Email: <a href="mailto:info@pmuroma.it">info@pmuroma.it</a>.</p>
     <h2>Dati trattati</h2>
-    <p>Possono essere trattati dati di contatto forniti volontariamente, come nome, telefono, email, trattamento richiesto e contenuto del messaggio. Se l'utente contatta l'attività tramite WhatsApp, Instagram o Google Maps, il trattamento segue anche le regole delle rispettive piattaforme.</p>
-    <h2>Finalità</h2>
-    <p>I dati sono usati per rispondere alle richieste, gestire consulenze e appuntamenti, fornire informazioni sui trattamenti e adempiere a eventuali obblighi amministrativi o di legge.</p>
-    <h2>Strumenti terzi</h2>
-    <p>Il sito può includere collegamenti a WhatsApp, Instagram, Google Maps e servizi tecnici dell'hosting. Eventuali strumenti analytics o marketing saranno indicati nella Cookie Policy e attivati secondo le impostazioni di consenso applicabili.</p>
-    <h2>Conservazione e diritti</h2>
-    <p>I dati sono conservati per il tempo necessario a gestire la richiesta e gli eventuali obblighi collegati. L'interessato può chiedere accesso, rettifica, cancellazione, limitazione o opposizione scrivendo a <a href="mailto:info@pmuroma.it">info@pmuroma.it</a>.</p>
-    <h2>Nota</h2>
-    <p>Questa bozza deve essere verificata prima della pubblicazione definitiva in base agli strumenti realmente attivi sul sito e all'organizzazione amministrativa dell'attività.</p>
+    <p>Il sito tratta dati tecnici strettamente necessari alla navigazione e alla memorizzazione delle preferenze privacy. Se l'utente sceglie di contattare l'attività possono essere trattati nome, telefono, email, trattamento richiesto, contenuto del messaggio e dati necessari a gestire consulenza e appuntamento.</p>
+    <p>Non è richiesto di inviare documentazione clinica o informazioni sanitarie nel primo contatto. Eventuali informazioni particolari comunicate spontaneamente saranno gestite solo quando necessarie alla valutazione del trattamento e con le garanzie applicabili.</p>
+    <h2>Finalità e basi giuridiche</h2>
+    <ul>
+      <li>rispondere alle richieste e organizzare consulenze o appuntamenti: esecuzione di misure precontrattuali richieste dall'interessato;</li>
+      <li>adempiere a obblighi amministrativi, fiscali o di legge: obbligo legale;</li>
+      <li>misurare visite e interazioni pubblicitarie tramite Meta Pixel: consenso, revocabile in ogni momento.</li>
+    </ul>
+    <h2>Destinatari e servizi terzi</h2>
+    <p>Il sito è ospitato tramite servizi tecnici Vercel. Meta Pixel viene caricato soltanto dopo il consenso marketing. WhatsApp, Instagram e Google Maps ricevono dati solo quando l'utente decide di aprire i relativi servizi, secondo le informative dei rispettivi fornitori. Non viene utilizzata la precedente landing LeadConnector per questa pagina.</p>
+    <h2>Trasferimenti</h2>
+    <p>Alcuni fornitori tecnologici possono trattare dati fuori dallo Spazio economico europeo secondo i meccanismi dichiarati nelle loro informative e negli accordi applicabili. Il dettaglio degli strumenti attivi è riportato nella <a href="cookie.html">Cookie Policy</a>.</p>
+    <h2>Conservazione</h2>
+    <p>I dati di contatto sono conservati per il tempo necessario a gestire la richiesta e gli eventuali rapporti successivi, fatti salvi gli obblighi di legge. La scelta privacy viene ricordata per 180 giorni, salvo cancellazione anticipata da parte dell'utente.</p>
+    <h2>Diritti</h2>
+    <p>L'interessato può chiedere accesso, rettifica, cancellazione, limitazione, portabilità ove applicabile o opposizione, e può revocare il consenso senza pregiudicare la liceità del trattamento precedente. Le richieste possono essere inviate a <a href="mailto:info@pmuroma.it">info@pmuroma.it</a>. È inoltre possibile proporre reclamo al Garante per la protezione dei dati personali.</p>
   </main>
   <footer class="site-footer">
     <div class="footer-brand">
@@ -64,6 +72,7 @@
     </div>
     <nav><a href="dettagli-trattamento.html">Dettagli trattamento</a><a href="blog/">Blog</a><a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a><a href="termini.html">Termini</a></nav>
   </footer>
-  <script src="assets/js/main.js?v=24" defer></script>
+  <script src="assets/js/main.js?v=25" defer></script>
+  <script type="module" src="assets/js/consent.js?v=1"></script>
 </body>
 </html>
