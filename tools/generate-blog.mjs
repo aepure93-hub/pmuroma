@@ -131,7 +131,8 @@ function pageShell({ title, description, canonical, image, type = "website", bod
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=26">
+  <link rel="stylesheet" href="/assets/vendor/cookieconsent/cookieconsent.css?v=3.1.0">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=29">
   ${structuredData ? `<script type="application/ld+json">\n  ${JSON.stringify(structuredData, null, 2)}\n  </script>` : ""}
 </head>
 <body>
@@ -145,7 +146,8 @@ ${nav("blog")}
 ${body}
 ${footer}
 ${cookieBanner}
-  <script src="/assets/js/main.js?v=26"></script>
+  <script src="/assets/js/main.js?v=25"></script>
+  <script type="module" src="/assets/js/consent.js?v=1"></script>
 </body>
 </html>
 `;

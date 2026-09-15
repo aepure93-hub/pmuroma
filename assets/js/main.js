@@ -1,19 +1,6 @@
-const banner = document.querySelector("[data-cookie-banner]");
-const accept = document.querySelector("[data-cookie-accept]");
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
-
-if (banner && !localStorage.getItem("pmuroma_cookie_ok")) {
-  banner.hidden = false;
-}
-
-if (accept) {
-  accept.addEventListener("click", () => {
-    localStorage.setItem("pmuroma_cookie_ok", "1");
-    banner.hidden = true;
-  });
-}
 
 const updateHeader = () => {
   if (!header) return;
