@@ -150,11 +150,12 @@ document.querySelectorAll("[data-cookie-settings]").forEach((button) => {
   button.addEventListener("click", () => CookieConsent.showPreferences());
 });
 
-document.querySelectorAll("[data-meta-event]").forEach((link) => {
+document.querySelectorAll("[data-meta-event], [data-track]").forEach((link) => {
   link.addEventListener("click", () => {
     if (!hasMarketingConsent() || !window.fbq) return;
-    window.fbq("track", link.dataset.metaEvent, {
-      contact_channel: link.dataset.contactChannel || "website",
+    const eventName = link.dataset.metaEvent || (link.dataset.track === "whatsapp" ? "Contact" : "ViewContent");
+    window.fbq("track", eventName, {
+      contact_channel: link.dataset.contactChannel || link.dataset.track || "website",
       page_path: window.location.pathname,
     });
   });
