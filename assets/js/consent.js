@@ -1,9 +1,40 @@
 import * as CookieConsent from "../vendor/cookieconsent/cookieconsent.esm.js";
 
 const META_PIXEL_ID = "4122708018035255";
+const CLARITY_PROJECT_ID = "ykghxxlzzj";
 let metaPixelLoaded = false;
+let clarityLoaded = false;
 
 const hasMarketingConsent = () => CookieConsent.acceptedCategory("marketing");
+const hasAnalyticsConsent = () => CookieConsent.acceptedCategory("analytics");
+
+const loadClarity = () => {
+  if (clarityLoaded || !hasAnalyticsConsent()) return;
+
+  clarityLoaded = true;
+  window.clarity = window.clarity || function clarityQueue() {
+    (window.clarity.q = window.clarity.q || []).push(arguments);
+  };
+
+  window.clarity("consentv2", {
+    ad_Storage: "denied",
+    analytics_Storage: "granted",
+  });
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.clarity.ms/tag/${CLARITY_PROJECT_ID}`;
+  script.dataset.consentService = "microsoft-clarity";
+  document.head.appendChild(script);
+};
+
+const revokeClarityConsent = () => {
+  if (!window.clarity) return;
+  window.clarity("consentv2", {
+    ad_Storage: "denied",
+    analytics_Storage: "denied",
+  });
+};
 
 const loadMetaPixel = () => {
   if (metaPixelLoaded || !hasMarketingConsent()) return;
@@ -42,12 +73,15 @@ const revokeMetaConsent = () => {
 };
 
 const syncConsent = () => {
+  if (hasAnalyticsConsent()) loadClarity();
+  else revokeClarityConsent();
+
   if (hasMarketingConsent()) loadMetaPixel();
   else revokeMetaConsent();
 };
 
 CookieConsent.run({
-  revision: 1,
+  revision: 2,
   cookie: {
     name: "pmuroma_consent",
     expiresAfterDays: 180,
@@ -71,6 +105,18 @@ CookieConsent.run({
       enabled: true,
       readOnly: true,
     },
+    analytics: {
+      enabled: false,
+      readOnly: false,
+      services: {
+        microsoft_clarity: {
+          label: "Microsoft Clarity",
+          onAccept: loadClarity,
+          onReject: revokeClarityConsent,
+          cookies: [{ name: /^_clck$|^_clsk$|^CLID$|^ANONCHK$|^MR$|^MUID$|^SM$/ }],
+        },
+      },
+    },
     marketing: {
       enabled: false,
       readOnly: false,
@@ -91,15 +137,15 @@ CookieConsent.run({
         consentModal: {
           title: "La tua privacy conta",
           description:
-            "Usiamo solo strumenti tecnici indispensabili. Con il tuo consenso possiamo attivare Meta Pixel per misurare le visite e migliorare le campagne. Puoi rifiutare senza limitazioni.",
-          acceptAllBtn: "Accetta marketing",
+            "Usiamo strumenti tecnici indispensabili. Solo con il tuo consenso attiviamo Microsoft Clarity per analizzare l'uso del sito e Meta Pixel per misurare le campagne. Puoi rifiutare senza limitazioni.",
+          acceptAllBtn: "Accetta tutto",
           acceptNecessaryBtn: "Rifiuta",
           showPreferencesBtn: "Personalizza",
           footer: '<a href="/privacy">Privacy</a><a href="/cookie">Cookie</a>',
         },
         preferencesModal: {
           title: "Preferenze privacy",
-          acceptAllBtn: "Accetta marketing",
+          acceptAllBtn: "Accetta tutto",
           acceptNecessaryBtn: "Rifiuta",
           savePreferencesBtn: "Salva preferenze",
           closeIconLabel: "Chiudi",
@@ -115,6 +161,12 @@ CookieConsent.run({
               description:
                 "Servono a ricordare questa scelta e a garantire il funzionamento essenziale del sito.",
               linkedCategory: "necessary",
+            },
+            {
+              title: "Analisi dell'esperienza",
+              description:
+                "Microsoft Clarity crea statistiche, mappe di calore e registrazioni delle interazioni per migliorare il sito. Il progetto usa il mascheramento completo dei contenuti ed è disattivato finché non accetti.",
+              linkedCategory: "analytics",
             },
             {
               title: "Misurazione pubblicitaria",
@@ -152,6 +204,9 @@ document.querySelectorAll("[data-cookie-settings]").forEach((button) => {
 
 document.querySelectorAll("[data-meta-event], [data-track]").forEach((link) => {
   link.addEventListener("click", () => {
+    if (hasAnalyticsConsent() && window.clarity) {
+      window.clarity("event", link.dataset.track === "whatsapp" ? "whatsapp_click" : "outbound_click");
+    }
     if (!hasMarketingConsent() || !window.fbq) return;
     const eventName = link.dataset.metaEvent || (link.dataset.track === "whatsapp" ? "Contact" : "ViewContent");
     window.fbq("track", eventName, {
