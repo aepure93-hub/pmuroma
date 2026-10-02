@@ -92,9 +92,19 @@
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/blog/trucco-permanente-labbra-colore-naturale</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/trattamento-labbra-colore-permanente-roma.jpeg</image:loc>
+      <image:title>Trucco permanente labbra: colore naturale senza effetto artificiale</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog/sopracciglia-sfumate-effetto-morbido-raffinato</loc>
