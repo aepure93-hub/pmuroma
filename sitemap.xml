@@ -92,9 +92,19 @@
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/blog/eyeliner-infracigliare-sguardo-naturale</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/eyeliner-infracigliare-prima-dopo-paola-benchea-roma.jpeg</image:loc>
+      <image:title>Eyeliner infracigliare: definire lo sguardo in modo naturale</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog/trucco-permanente-labbra-colore-naturale</loc>
