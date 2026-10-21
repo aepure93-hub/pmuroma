@@ -42,6 +42,7 @@ const linkLabels = new Map([
   ["#portfolio", "Guarda il portfolio"],
   ["#studio", "Studio, parcheggio e percorso"],
   ["dettagli-trattamento.html", "Come funziona il trattamento"],
+  ["eyeliner-permanente-roma.html", "Eyeliner infracigliare a Roma"],
   ["sopracciglia.html", "Trucco permanente sopracciglia"],
   ["prezzi.html", "Prezzi trucco permanente"],
   ["contatti.html", "Contatti"]
@@ -185,7 +186,7 @@ for (const post of published) {
           <a class="button primary" href="/#contatti">Prenota una consulenza</a>
         </aside>
         <div class="blog-body">
-          ${post.sections
+${post.sections
             .map(([heading, ...paragraphs]) => `
           <section>
             <h2>${escapeHtml(heading)}</h2>

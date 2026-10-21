@@ -16,6 +16,9 @@ Sito statico per `pmuroma.it`, gestito come landing HTML/CSS/JavaScript vanilla.
 
 ```powershell
 npx serve . -l 4173
+node tools/check-blog-schedule.mjs
+node tools/generate-blog.mjs --now="2026-10-21T12:00:00+02:00"
+node tools/qa-site.js
 ```
 
 ## Note

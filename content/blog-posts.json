@@ -96,6 +96,22 @@
     "links": ["#prezzi", "dettagli-trattamento.html", "#contatti"]
   },
   {
+    "title": "Eyeliner sfumato: quando scegliere un effetto più morbido",
+    "slug": "eyeliner-sfumato-effetto-morbido",
+    "category": "Eyeliner",
+    "publishedAt": "2026-10-16T18:00:00+02:00",
+    "description": "Differenze tra eyeliner sfumato e infracigliare, risultato estetico e aspetti da valutare quando si desidera uno sguardo definito ma non grafico.",
+    "image": "assets/images/eyeliner-infracigliare-prima-dopo-paola-benchea-roma.jpeg",
+    "alt": "Definizione naturale dello sguardo con eyeliner infracigliare Paola Benchea Roma",
+    "sections": [
+      ["Che cosa si intende per effetto sfumato", "Nel trucco permanente, l'espressione eyeliner sfumato descrive un risultato in cui il colore appare più diffuso rispetto a una linea netta. Non indica però una forma uguale per tutti: ampiezza, intensità e direzione devono essere valutate sul singolo occhio."],
+      ["Quando si cerca un risultato più morbido", "Può interessare chi desidera dare più presenza allo sguardo senza l'effetto deciso di un eyeliner grafico. Il riferimento utile non è soltanto una fotografia, ma anche il modo in cui ci si trucca ogni giorno e il livello di definizione con cui ci si sente a proprio agio."],
+      ["Sfumato e infracigliare non sono la stessa cosa", "L'infracigliare lavora molto vicino alla rima ciliare e resta più discreto. L'effetto sfumato distribuisce invece il colore in modo più visibile sopra le ciglia. Nel listino attuale dello studio è disponibile l'eyeliner infracigliare; la consulenza serve a chiarire quale risultato si sta cercando prima di prenotare."],
+      ["Prima viene la valutazione dello sguardo", "Forma dell'occhio, palpebra, abitudini di make-up e risultato desiderato vanno osservati insieme. Copiare una linea vista online può non valorizzare un altro volto: un progetto equilibrato nasce sempre da una valutazione personalizzata."]
+    ],
+    "links": ["eyeliner-permanente-roma.html", "#prezzi", "#contatti"]
+  },
+  {
     "title": "Ritocco dopo 40 giorni: perché è importante",
     "slug": "ritocco-40-giorni-trucco-permanente",
     "category": "Aftercare",
