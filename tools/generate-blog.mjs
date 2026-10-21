@@ -42,6 +42,7 @@ const linkLabels = new Map([
   ["#portfolio", "Guarda il portfolio"],
   ["#studio", "Studio, parcheggio e percorso"],
   ["dettagli-trattamento.html", "Come funziona il trattamento"],
+  ["sopracciglia-pelo-realistico-roma.html", "Sopracciglia pelo realistico a Roma"],
   ["eyeliner-permanente-roma.html", "Eyeliner infracigliare a Roma"],
   ["sopracciglia.html", "Trucco permanente sopracciglia"],
   ["prezzi.html", "Prezzi trucco permanente"],

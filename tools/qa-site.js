@@ -13,7 +13,6 @@ const collectHtml = (dir) => {
 };
 collectHtml(root);
 const forbidden = [
-  "Microblading",
   "Laminazione",
   "Contorno labbra",
   "Riempimento full",
@@ -61,12 +60,31 @@ const faq = fs.readFileSync(path.join(root, "faq-trucco-permanente.html"), "utf8
 for (const requiredFaq of [
   "Quanto costa il trucco permanente?",
   "Che cosa significa effetto naturale?",
+  "Microblading e pelo realistico sono la stessa cosa?",
   "Quali pigmenti vengono usati?",
   "Quali sono le controindicazioni del trucco permanente labbra?",
   "Quale eyeliner permanente offre Paola?",
   "Lo studio riceve senza appuntamento?"
 ]) {
   if (!faq.includes(requiredFaq)) errors.push(`Missing query-led FAQ: ${requiredFaq}`);
+}
+if (!faq.includes("Paola non offre il microblading")) {
+  errors.push("FAQ does not state that Paola does not offer microblading");
+}
+
+const posts = JSON.parse(fs.readFileSync(path.join(root, "content/blog-posts.json"), "utf8"));
+const comparisonPost = posts.find((post) => post.slug === "microblading-pelo-realistico-differenze");
+if (!comparisonPost) {
+  errors.push("Missing reel-led microblading versus realistic hair article");
+} else {
+  const comparisonText = JSON.stringify(comparisonPost);
+  for (const requiredClaim of [
+    "Paola non offre il microblading",
+    "pelo realistico con dermografo",
+    "https://www.instagram.com/reel/DeSOhcKs4Ba/"
+  ]) {
+    if (!comparisonText.includes(requiredClaim)) errors.push(`Missing verified comparison claim: ${requiredClaim}`);
+  }
 }
 
 const prices = fs.readFileSync(path.join(root, "prezzi.html"), "utf8");
@@ -90,6 +108,15 @@ for (const file of htmlFiles) {
   }
 
   const html = fs.readFileSync(full, "utf8");
+  const normalizedFile = file.replaceAll("\\", "/");
+  const microbladingAllowed = new Set([
+    "faq-trucco-permanente.html",
+    "blog/index.html",
+    "blog/microblading-pelo-realistico-differenze/index.html"
+  ]);
+  if (/microblading/i.test(html) && !microbladingAllowed.has(normalizedFile)) {
+    errors.push(`Microblading appears outside approved educational content: ${file}`);
+  }
   if (/[ÃÂ�]/.test(html)) errors.push(`Encoding issue in ${file}`);
 
   for (const term of forbidden) {

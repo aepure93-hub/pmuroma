@@ -19,7 +19,7 @@ Pubblicazione automatica: ogni venerdi alle 18:00 ora Italia. Il workflow GitHub
 | 2026-10-02 18:00 | Trucco permanente labbra: colore naturale senza effetto artificiale |
 | 2026-10-09 18:00 | Eyeliner infracigliare: definire lo sguardo in modo naturale |
 | 2026-10-16 18:00 | Eyeliner sfumato: quando scegliere un effetto piu morbido |
-| 2026-10-23 18:00 | Ritocco dopo 40 giorni: perche e importante |
+| 2026-10-23 18:00 | Microblading e pelo realistico: perche non sono la stessa cosa |
 | 2026-10-30 18:00 | Come prepararsi al trucco permanente |
 | 2026-11-06 18:00 | Quanto dura il trucco permanente? |
 | 2026-11-13 18:00 | Trucco permanente e pelle matura: cosa valutare |
