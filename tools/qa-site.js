@@ -57,6 +57,31 @@ if (!vercelConfig.includes('"source": "/studio-roma-aurelia"') ||
   errors.push("Missing permanent redirect from the old Aurelia studio route");
 }
 
+const faq = fs.readFileSync(path.join(root, "faq-trucco-permanente.html"), "utf8");
+for (const requiredFaq of [
+  "Quanto costa il trucco permanente?",
+  "Che cosa significa effetto naturale?",
+  "Quali pigmenti vengono usati?",
+  "Quali sono le controindicazioni del trucco permanente labbra?",
+  "Quale eyeliner permanente offre Paola?",
+  "Lo studio riceve senza appuntamento?"
+]) {
+  if (!faq.includes(requiredFaq)) errors.push(`Missing query-led FAQ: ${requiredFaq}`);
+}
+
+const prices = fs.readFileSync(path.join(root, "prezzi.html"), "utf8");
+if (!prices.includes("Trattamenti da 200 a 300 euro")) {
+  errors.push("Prices page does not expose the verified 200–300 euro range");
+}
+if (!prices.includes('"@type": "Offer"')) {
+  errors.push("Prices page is missing visible-offer structured data");
+}
+
+const styles = fs.readFileSync(path.join(root, "assets/css/styles.css"), "utf8");
+if (!styles.includes(".blog-article .blog-hero {\n    grid-template-columns: 1fr;\n  }")) {
+  errors.push("Blog article hero does not collapse to one column on mobile");
+}
+
 for (const file of htmlFiles) {
   const full = path.join(root, file);
   if (!fs.existsSync(full)) {

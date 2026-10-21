@@ -2269,6 +2269,10 @@ summary {
     grid-template-columns: 1fr;
   }
 
+  .blog-article .blog-hero {
+    grid-template-columns: 1fr;
+  }
+
   .blog-hero-media {
     justify-self: start;
     width: min(420px, 100%);
@@ -2462,7 +2466,8 @@ summary {
   }
 
   .blog-index-hero h1,
-  .blog-hero h1 {
+  .blog-hero h1,
+  .blog-article .blog-hero h1 {
     max-width: 9ch;
     font-size: clamp(44px, 13vw, 56px);
   }
