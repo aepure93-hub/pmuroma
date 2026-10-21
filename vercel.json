@@ -48,7 +48,12 @@
     },
     {
       "source": "/il-mio-studio",
-      "destination": "/studio-roma-aurelia",
+      "destination": "/studio-roma-massimina",
+      "permanent": true
+    },
+    {
+      "source": "/studio-roma-aurelia",
+      "destination": "/studio-roma-massimina",
       "permanent": true
     },
     {

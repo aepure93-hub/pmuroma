@@ -67,7 +67,7 @@ const nav = (active = "") => `
       <a href="/trucco-permanente-roma">Trattamenti</a>
       <a href="/prezzi">Prezzi</a>
       <a href="/portfolio">Portfolio</a>
-      <a href="/studio-roma-aurelia">Studio</a>
+      <a href="/studio-roma-massimina">Studio</a>
       <a href="/chi-e-paola-benchea">Paola</a>
       <a href="/blog"${active === "blog" ? ' aria-current="page"' : ""}>Blog</a>
       <a href="/contatti">Contatti</a>
@@ -90,7 +90,7 @@ const footer = `
       <a href="/sopracciglia">Sopracciglia</a>
       <a href="/prezzi">Prezzi</a>
       <a href="/chi-e-paola-benchea">Paola Benchea</a>
-      <a href="/studio-roma-aurelia">Studio</a>
+      <a href="/studio-roma-massimina">Studio</a>
       <a href="/contatti">Contatti</a>
       <a href="/blog">Blog</a>
       <a href="/privacy">Privacy</a>
@@ -133,7 +133,7 @@ function pageShell({ title, description, canonical, image, type = "website", bod
   <link rel="apple-touch-icon" href="/favicon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/vendor/cookieconsent/cookieconsent.css?v=3.1.0">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=29">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=30">
   ${structuredData ? `<script type="application/ld+json">\n  ${JSON.stringify(structuredData, null, 2)}\n  </script>` : ""}
 </head>
 <body>
@@ -323,7 +323,7 @@ const staticUrls = [
   ["/prezzi", "2026-09-11", "monthly", "0.85"],
   ["/portfolio", "2026-09-11", "monthly", "0.85"],
   ["/chi-e-paola-benchea", "2026-09-11", "monthly", "0.85"],
-  ["/studio-roma-aurelia", "2026-09-11", "monthly", "0.85"],
+  ["/studio-roma-massimina", "2026-09-11", "monthly", "0.85"],
   ["/recensioni", "2026-09-11", "monthly", "0.75"],
   ["/faq-trucco-permanente", "2026-09-11", "monthly", "0.8"],
   ["/dettagli-trattamento", "2026-09-11", "monthly", "0.8"],

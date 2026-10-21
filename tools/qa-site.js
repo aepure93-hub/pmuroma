@@ -27,6 +27,36 @@ const forbidden = [
 
 let errors = [];
 
+const siteTextFiles = [
+  ...htmlFiles,
+  "BLOG-SCHEDULE.md",
+  "content/blog-posts.json",
+  "llms.txt",
+  "sitemap.xml",
+  "tools/generate-blog.mjs"
+];
+
+for (const file of siteTextFiles) {
+  const text = fs.readFileSync(path.join(root, file), "utf8");
+  if (/\bAurelia\b/i.test(text)) errors.push(`Old locality "Aurelia" in ${file}`);
+}
+
+const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
+if (!home.includes("5.0 / 25 recensioni")) errors.push("Homepage Google review count is not 25");
+if (!/class="review-card"[^>]*href="https:\/\/maps\.app\.goo\.gl\/aXcvbN4NfMTmpTgc9"/.test(home)) {
+  errors.push("Homepage review cards do not link to the Google profile");
+}
+if (/eyeliner[^<.]{0,80}sfumat/i.test(home)) errors.push("Homepage still presents shaded eyeliner as a service");
+
+const massiminaPage = path.join(root, "studio-roma-massimina.html");
+if (!fs.existsSync(massiminaPage)) errors.push("Missing studio-roma-massimina.html");
+
+const vercelConfig = fs.readFileSync(path.join(root, "vercel.json"), "utf8");
+if (!vercelConfig.includes('"source": "/studio-roma-aurelia"') ||
+    !vercelConfig.includes('"destination": "/studio-roma-massimina"')) {
+  errors.push("Missing permanent redirect from the old Aurelia studio route");
+}
+
 for (const file of htmlFiles) {
   const full = path.join(root, file);
   if (!fs.existsSync(full)) {

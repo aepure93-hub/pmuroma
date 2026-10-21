@@ -30,5 +30,5 @@ Pubblicazione automatica: ogni venerdi alle 18:00 ora Italia. Il workflow GitHub
 | 2026-12-18 18:00 | Sopracciglia irregolari: come ragionare sulla forma |
 | 2026-12-25 18:00 | Colore labbra permanente: come scegliere una tonalita elegante |
 | 2027-01-01 18:00 | Trucco permanente e lavoro quotidiano: praticita senza eccessi |
-| 2027-01-08 18:00 | Studio PMU a Roma zona Aurelia: cosa sapere prima di arrivare |
+| 2027-01-08 18:00 | Studio PMU a Roma zona Massimina: cosa sapere prima di arrivare |
 | 2027-01-15 18:00 | Portfolio trucco permanente: come leggere le foto prima e dopo |
