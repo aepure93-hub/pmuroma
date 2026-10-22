@@ -205,7 +205,12 @@ document.querySelectorAll("[data-cookie-settings]").forEach((button) => {
 document.querySelectorAll("[data-meta-event], [data-track]").forEach((link) => {
   link.addEventListener("click", () => {
     if (hasAnalyticsConsent() && window.clarity) {
-      window.clarity("event", link.dataset.track === "whatsapp" ? "whatsapp_click" : "outbound_click");
+      const clarityEvent = link.dataset.track === "whatsapp"
+        ? "whatsapp_click"
+        : link.dataset.track === "pmuloop"
+          ? "pmuloop_click"
+          : "outbound_click";
+      window.clarity("event", clarityEvent);
     }
     if (!hasMarketingConsent() || !window.fbq) return;
     const eventName = link.dataset.metaEvent || (link.dataset.track === "whatsapp" ? "Contact" : "ViewContent");

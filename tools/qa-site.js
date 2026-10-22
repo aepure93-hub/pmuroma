@@ -100,6 +100,9 @@ if (!styles.includes(".blog-article .blog-hero {\n    grid-template-columns: 1fr
   errors.push("Blog article hero does not collapse to one column on mobile");
 }
 
+const pmuloopLinkCheck = path.join(root, "tools/check-pmuloop-links.mjs");
+if (!fs.existsSync(pmuloopLinkCheck)) errors.push("Missing PMULoop cross-site link matrix check");
+
 for (const file of htmlFiles) {
   const full = path.join(root, file);
   if (!fs.existsSync(full)) {

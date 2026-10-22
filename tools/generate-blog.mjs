@@ -97,6 +97,7 @@ const footer = `
       <a href="/privacy">Privacy</a>
       <a href="/cookie">Cookie</a>
       <a href="/termini">Termini</a>
+      <a href="https://pmuloop.com/?utm_source=pmuroma&utm_medium=referral&utm_campaign=studio_origin" data-track="pmuloop" rel="noopener">PMULoop · progetto professionale</a>
     </nav>
   </footer>`;
 

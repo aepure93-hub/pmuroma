@@ -1414,6 +1414,22 @@ summary {
   color: var(--cocoa);
 }
 
+.pmuloop-collaboration {
+  margin: 34px 0;
+  padding: clamp(24px, 5vw, 38px);
+  border: 1px solid rgba(154, 96, 84, 0.2);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(251, 245, 238, 0.96), rgba(232, 218, 205, 0.42));
+}
+
+.pmuloop-collaboration h2 {
+  margin-top: 6px;
+}
+
+.pmuloop-collaboration .button {
+  margin-top: 8px;
+}
+
 .site-footer nav {
   display: flex;
   flex-wrap: wrap;
