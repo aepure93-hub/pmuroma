@@ -99,9 +99,27 @@ const styles = fs.readFileSync(path.join(root, "assets/css/styles.css"), "utf8")
 if (!styles.includes(".blog-article .blog-hero {\n    grid-template-columns: 1fr;\n  }")) {
   errors.push("Blog article hero does not collapse to one column on mobile");
 }
+if (!/\.site-footer\s*\{[^}]*grid-template-columns:\s*minmax\(240px,\s*0\.75fr\)\s+minmax\(0,\s*2\.25fr\)/s.test(styles)) {
+  errors.push("Desktop footer does not reserve a readable brand column");
+}
+if (!/\.blog-article \.blog-hero:not\(:has\(\.blog-hero-media\)\)\s*\{[^}]*grid-template-columns:\s*1fr/s.test(styles)) {
+  errors.push("Internal page heroes do not share the single-column title layout");
+}
+if (!/\.blog-index-hero h1,\s*\.blog-article \.blog-hero:not\(:has\(\.blog-hero-media\)\) h1\s*\{[^}]*font-size:\s*clamp\(52px,\s*6vw,\s*82px\)/s.test(styles)) {
+  errors.push("Internal and blog-index titles do not share the desktop type scale");
+}
+const tabletRules = styles.slice(styles.lastIndexOf("@media (max-width: 820px)"), styles.indexOf("@media (max-width: 640px)"));
+if (/\.site-header\s*\{/.test(tabletRules)) {
+  errors.push("Tablet header overrides the three-column brand/menu/CTA layout");
+}
 
 const pmuloopLinkCheck = path.join(root, "tools/check-pmuloop-links.mjs");
 if (!fs.existsSync(pmuloopLinkCheck)) errors.push("Missing PMULoop cross-site link matrix check");
+
+const profile = fs.readFileSync(path.join(root, "chi-e-paola-benchea.html"), "utf8");
+if (!profile.includes('<p class="eyebrow">Paola Benchea</p>') || !profile.includes("<h1>Chi è Paola Benchea</h1>")) {
+  errors.push("Profile hero does not follow the shared internal-page title structure");
+}
 
 for (const file of htmlFiles) {
   const full = path.join(root, file);
