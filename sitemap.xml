@@ -92,9 +92,19 @@
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/blog/microblading-pelo-realistico-differenze</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/paola-benchea-microblading-pelo-realistico-reel.jpg</image:loc>
+      <image:title>Microblading e pelo realistico: perché non sono la stessa cosa</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog/eyeliner-sfumato-effetto-morbido</loc>
