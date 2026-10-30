@@ -21,6 +21,21 @@ const normalizeTitle = (value) =>
     .replace(/\s+/g, " ")
     .trim()
     .toLocaleLowerCase("it");
+const romeDateTime = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Rome",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23",
+});
+const formatRomeMinute = (value) => {
+  const parts = Object.fromEntries(
+    romeDateTime.formatToParts(new Date(value)).map(({ type, value: part }) => [type, part])
+  );
+  return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}`;
+};
 
 for (const post of posts) {
   if (seenSlugs.has(post.slug)) errors.push(`Duplicate blog slug: ${post.slug}`);
@@ -45,6 +60,11 @@ for (const entry of scheduled) {
   if (!post.publishedAt.startsWith(scheduledMinute)) {
     errors.push(
       `Scheduled date mismatch for "${entry.title}": calendar ${entry.date} ${entry.time}, content ${post.publishedAt}`
+    );
+  }
+  if (formatRomeMinute(post.publishedAt) !== scheduledMinute) {
+    errors.push(
+      `Europe/Rome time mismatch for "${entry.title}": calendar ${scheduledMinute}, instant ${post.publishedAt}`
     );
   }
 }

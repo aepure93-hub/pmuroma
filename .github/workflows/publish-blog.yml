@@ -3,10 +3,13 @@ name: Publish scheduled blog posts
 on:
   workflow_dispatch:
   schedule:
-    # 18:00 Europe/Rome during daylight saving time.
-    - cron: "0 16 * * 5"
-    # 18:00 Europe/Rome during standard time, plus a fallback run for delayed schedules.
-    - cron: "0 17 * * 5"
+    # Avoid minute 00: GitHub may delay or drop scheduled runs during peak load.
+    # 18:17 Europe/Rome during daylight saving time.
+    - cron: "17 16 * * 5"
+    # 18:17 Europe/Rome during standard time; also a DST fallback.
+    - cron: "17 17 * * 5"
+    # Final fallback if the primary scheduled run is delayed or dropped.
+    - cron: "17 18 * * 5"
 
 permissions:
   contents: write
@@ -21,8 +24,8 @@ jobs:
     env:
       TZ: Europe/Rome
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
       - name: Validate editorial calendar
