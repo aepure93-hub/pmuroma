@@ -92,9 +92,19 @@
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/blog/quanto-dura-trucco-permanente</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/portfolio-sopracciglia-sfumate-roma-02.jpeg</image:loc>
+      <image:title>Quanto dura il trucco permanente?</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog/come-prepararsi-trucco-permanente</loc>
