@@ -92,9 +92,19 @@
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmuroma.it/blog/trucco-permanente-naturale-cosa-significa</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.pmuroma.it/assets/images/portfolio-labbra-colore-permanente-roma-03.jpeg</image:loc>
+      <image:title>Trucco permanente naturale: cosa significa davvero</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.pmuroma.it/blog/trucco-permanente-pelle-matura-cosa-valutare</loc>
